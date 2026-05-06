@@ -1,0 +1,14 @@
+grupo,categoria,fixo
+Receita,Salário,sim
+Receita,Extra,não
+Alimentação,Mercado,não
+Alimentação,Restaurante,não
+Transporte,Uber,não
+Transporte,Carro,não
+Saúde,Plano de Saúde,sim
+Assinaturas,Streaming,sim
+Educação,Educação,não
+Lazer,Lazer,não
+Pessoal,Futilidades,não
+Casa,Conta de Luz,sim
+Casa,Conta de Internet,sim

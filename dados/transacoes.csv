@@ -1,0 +1,27 @@
+data,descricao,valor,tipo,categoria,grupo,observacao
+2025-01-05,Salário Janeiro,5000.00,receita,Salário,Receita,
+2025-01-07,Supermercado Extra,320.50,despesa,Mercado,Alimentação,Compra semanal
+2025-01-08,Uber trabalho,25.00,despesa,Uber,Transporte,
+2025-01-10,Netflix,55.90,despesa,Streaming,Assinaturas,
+2025-01-10,Conta de Luz,180.00,despesa,Conta de Luz,Casa,
+2025-01-10,Conta de Internet,120.00,despesa,Conta de Internet,Casa,
+2025-01-12,Plano de Saúde,350.00,despesa,Plano de Saúde,Saúde,
+2025-01-14,iFood,62.00,despesa,Restaurante,Alimentação,Pedido fim de semana
+2025-01-15,Uber trabalho,18.50,despesa,Uber,Transporte,
+2025-01-18,Curso Python,199.90,despesa,Educação,Educação,Udemy
+2025-01-20,Mercado bairro,210.00,despesa,Mercado,Alimentação,
+2025-01-22,Cinema,80.00,despesa,Lazer,Lazer,Com amigos
+2025-01-25,Compra aleatória,45.00,despesa,Futilidades,Pessoal,Compra impulsiva
+2025-01-28,Uber rolê,32.00,despesa,Uber,Transporte,Saída noturna
+2025-01-30,Freela design,800.00,receita,Extra,Receita,Projeto pontual
+2025-02-05,Salário Fevereiro,5000.00,receita,Salário,Receita,
+2025-02-07,Supermercado,290.00,despesa,Mercado,Alimentação,
+2025-02-08,Uber trabalho,22.00,despesa,Uber,Transporte,
+2025-02-10,Netflix,55.90,despesa,Streaming,Assinaturas,
+2025-02-10,Conta de Luz,165.00,despesa,Conta de Luz,Casa,
+2025-02-10,Conta de Internet,120.00,despesa,Conta de Internet,Casa,
+2025-02-12,Plano de Saúde,350.00,despesa,Plano de Saúde,Saúde,
+2025-02-14,Restaurante,95.00,despesa,Restaurante,Alimentação,Jantar especial
+2025-02-20,Mercado,175.00,despesa,Mercado,Alimentação,
+2025-02-23,Show,150.00,despesa,Lazer,Lazer,
+2025-02-26,Manutenção carro,400.00,despesa,Carro,Transporte,Troca de óleo
