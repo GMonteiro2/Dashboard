@@ -89,3 +89,51 @@ with col5:
     )
     fig2.update_layout(coloraxis_showscale=False)
     st.plotly_chart(fig2, use_container_width=True)
+
+
+st.markdown('---')
+st.subheader('🧠 Resumo do Mês')
+
+
+mes_recente = despesas[despesas['data'] == despesas['data'].max()]['data'].dt.to_period('M').iloc[0]
+despesas_mes = despesas[despesas['data'].dt.to_period('M') == mes_recente]
+receitas_mes = receitas[receitas['data'].dt.to_period('M') == mes_recente]
+
+total_desp_mes = despesas_mes['valor'].sum()
+total_rec_mes = receitas_mes['valor'].sum()
+saldo_mes = total_rec_mes - total_desp_mes
+
+maior_categoria = despesas_mes.groupby('categoria')['valor'].sum().idxmax()
+maior_valor = despesas_mes.groupby('categoria')['valor'].sum().max()
+
+gastos_opcionais = despesas_mes[despesas_mes['categoria'].isin(['Lazer', 'Futilidades'])]['valor'].sum()
+perc_opcional = (gastos_opcionais / total_rec_mes * 100) if total_rec_mes > 0 else 0
+
+meses = despesas.groupby(despesas['data'].dt.to_period('M'))['valor'].sum()
+if len(meses) >= 2:
+    mes_anterior = meses.iloc[-2]
+    variacao = ((total_desp_mes - mes_anterior) / mes_anterior * 100) if mes_anterior > 0 else 0
+else:
+    variacao = 0
+
+resumo = []
+
+resumo.append(f"📊 **Seu maior gasto foi {maior_categoria}** com R$ {maior_valor:.2f}.")
+
+if perc_opcional > 20:
+    resumo.append(f"⚠️ **Lazer e Futilidades** consumiram {perc_opcional:.1f}% da sua renda. Tente reduzir para abaixo de 20% no próximo mês.")
+
+if saldo_mes < 0:
+    resumo.append(f"🚨 **Atenção!** Seu saldo ficou negativo em R$ {abs(saldo_mes):.2f}. Revise seus gastos urgentemente.")
+
+if variacao > 0 and len(meses) >= 2:
+    resumo.append(f"📈 Você gastou **{variacao:.1f}% a mais** que o mês anterior. Tente melhorar no próximo mês.")
+elif variacao < 0 and len(meses) >= 2:
+    resumo.append(f"📉 Ótimo! Você gastou **{abs(variacao):.1f}% a menos** que o mês anterior.")
+
+perc_saldo = (saldo_mes / total_rec_mes * 100) if total_rec_mes > 0 else 0
+if perc_saldo > 30:
+    resumo.append(f"✅ **Parabéns!** Você guardou {perc_saldo:.1f}% da sua renda. Continue assim!")
+
+for linha in resumo:
+    st.markdown(linha)
