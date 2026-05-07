@@ -22,6 +22,35 @@ categorias_selecionadas = st.sidebar.multiselect(
     default=categorias_disponiveis
 )
 
+# Formulário na sidebar
+st.sidebar.markdown('---')
+st.sidebar.subheader('➕ Adicionar Gasto')
+
+with st.sidebar.form('form_gasto'):
+    data_input = st.date_input('Data')
+    descricao_input = st.text_input('Descrição')
+    valor_input = st.number_input('Valor (R$)', min_value=0.0, step=0.01, format='%.2f')
+    tipo_input = st.selectbox('Tipo', ['despesa', 'receita'])
+    grupo_input = st.selectbox('Grupo', sorted(transacoes['grupo'].unique()))
+    categoria_input = st.selectbox('Categoria', sorted(transacoes['categoria'].unique()))
+    observacao_input = st.text_input('Observação (opcional)')
+    
+    salvar = st.form_submit_button('Salvar')
+
+if salvar:
+    nova_linha = {
+        'data': data_input,
+        'descricao': descricao_input,
+        'valor': valor_input,
+        'tipo': tipo_input,
+        'categoria': categoria_input,
+        'grupo': grupo_input,
+        'observacao': observacao_input
+    }
+    novo_df = pd.DataFrame([nova_linha])
+    novo_df.to_csv('dados/transacoes.csv', mode='a', header=False, index=False)
+    st.sidebar.success('Gasto salvo com sucesso!')
+
 despesas = despesas[despesas['categoria'].isin(categorias_selecionadas)]
 
 total_despesas = despesas['valor'].sum()
@@ -52,7 +81,7 @@ with col5:
     st.subheader('Gastos por Mês')
     por_mes = despesas.groupby(despesas['data'].dt.to_period('M'))['valor'].sum()
     fig2 = px.bar(
-        x=['Janeiro', 'Fevereiro'],
+        x=por_mes.index.astype(str),
         y=por_mes.values,
         labels={'x': 'Mês', 'y': 'Total (R$)'},
         color=por_mes.values,
