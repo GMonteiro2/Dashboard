@@ -1,27 +1,82 @@
 data,descricao,valor,tipo,categoria,grupo,observacao
-2025-01-05,Salário Janeiro,5000.00,receita,Salário,Receita,
-2025-01-07,Supermercado Extra,320.50,despesa,Mercado,Alimentação,Compra semanal
-2025-01-08,Uber trabalho,25.00,despesa,Uber,Transporte,
-2025-01-10,Netflix,55.90,despesa,Streaming,Assinaturas,
-2025-01-10,Conta de Luz,180.00,despesa,Conta de Luz,Casa,
-2025-01-10,Conta de Internet,120.00,despesa,Conta de Internet,Casa,
-2025-01-12,Plano de Saúde,350.00,despesa,Plano de Saúde,Saúde,
-2025-01-14,iFood,62.00,despesa,Restaurante,Alimentação,Pedido fim de semana
-2025-01-15,Uber trabalho,18.50,despesa,Uber,Transporte,
-2025-01-18,Curso Python,199.90,despesa,Educação,Educação,Udemy
-2025-01-20,Mercado bairro,210.00,despesa,Mercado,Alimentação,
-2025-01-22,Cinema,80.00,despesa,Lazer,Lazer,Com amigos
-2025-01-25,Compra aleatória,45.00,despesa,Futilidades,Pessoal,Compra impulsiva
-2025-01-28,Uber rolê,32.00,despesa,Uber,Transporte,Saída noturna
-2025-01-30,Freela design,800.00,receita,Extra,Receita,Projeto pontual
-2025-02-05,Salário Fevereiro,5000.00,receita,Salário,Receita,
-2025-02-07,Supermercado,290.00,despesa,Mercado,Alimentação,
-2025-02-08,Uber trabalho,22.00,despesa,Uber,Transporte,
-2025-02-10,Netflix,55.90,despesa,Streaming,Assinaturas,
-2025-02-10,Conta de Luz,165.00,despesa,Conta de Luz,Casa,
-2025-02-10,Conta de Internet,120.00,despesa,Conta de Internet,Casa,
-2025-02-12,Plano de Saúde,350.00,despesa,Plano de Saúde,Saúde,
-2025-02-14,Restaurante,95.00,despesa,Restaurante,Alimentação,Jantar especial
-2025-02-20,Mercado,175.00,despesa,Mercado,Alimentação,
-2025-02-23,Show,150.00,despesa,Lazer,Lazer,
-
+2026-01-05,Salário Janeiro,5000.00,receita,Salário,Receita,
+2026-01-07,Supermercado Extra,320.50,despesa,Mercado,Alimentação,Compra semanal
+2026-01-08,Uber trabalho,25.00,despesa,Uber,Transporte,
+2026-01-10,Netflix,55.90,despesa,Streaming,Assinaturas,
+2026-01-10,Conta de Luz,180.00,despesa,Conta de Luz,Casa,
+2026-01-10,Conta de Internet,120.00,despesa,Conta de Internet,Casa,
+2026-01-12,Plano de Saúde,350.00,despesa,Plano de Saúde,Saúde,
+2026-01-14,iFood,62.00,despesa,Restaurante,Alimentação,Pedido fim de semana
+2026-01-15,Uber trabalho,18.50,despesa,Uber,Transporte,
+2026-01-18,Curso Python,199.90,despesa,Educação,Educação,Udemy
+2026-01-20,Mercado bairro,210.00,despesa,Mercado,Alimentação,
+2026-01-22,Cinema,80.00,despesa,Lazer,Lazer,Com amigos
+2026-01-25,Compra aleatória,45.00,despesa,Futilidades,Pessoal,Compra impulsiva
+2026-01-28,Uber rolê,32.00,despesa,Uber,Transporte,Saída noturna
+2026-01-30,Freela design,800.00,receita,Extra,Receita,Projeto pontual
+2026-02-05,Salário Fevereiro,5000.00,receita,Salário,Receita,
+2026-02-07,Supermercado,290.00,despesa,Mercado,Alimentação,
+2026-02-08,Uber trabalho,22.00,despesa,Uber,Transporte,
+2026-02-10,Netflix,55.90,despesa,Streaming,Assinaturas,
+2026-02-10,Conta de Luz,165.00,despesa,Conta de Luz,Casa,
+2026-02-10,Conta de Internet,120.00,despesa,Conta de Internet,Casa,
+2026-02-12,Plano de Saúde,350.00,despesa,Plano de Saúde,Saúde,
+2026-02-14,Restaurante,95.00,despesa,Restaurante,Alimentação,Jantar especial
+2026-02-20,Mercado,175.00,despesa,Mercado,Alimentação,
+2026-02-23,Show,150.00,despesa,Lazer,Lazer,
+2026-02-26,Manutenção carro,400.00,despesa,Carro,Transporte,Troca de óleo
+2026-03-05,Salário Março,5000.00,receita,Salário,Receita,
+2026-03-07,Supermercado,310.00,despesa,Mercado,Alimentação,
+2026-03-08,Uber trabalho,28.00,despesa,Uber,Transporte,
+2026-03-10,Netflix,55.90,despesa,Streaming,Assinaturas,
+2026-03-10,Conta de Luz,210.00,despesa,Conta de Luz,Casa,Verão conta alta
+2026-03-10,Conta de Internet,120.00,despesa,Conta de Internet,Casa,
+2026-03-12,Plano de Saúde,350.00,despesa,Plano de Saúde,Saúde,
+2026-03-15,iFood,88.00,despesa,Restaurante,Alimentação,
+2026-03-17,Uber trabalho,19.00,despesa,Uber,Transporte,
+2026-03-18,Livros,120.00,despesa,Educação,Educação,
+2026-03-20,Mercado,230.00,despesa,Mercado,Alimentação,
+2026-03-22,Bar com amigos,180.00,despesa,Lazer,Lazer,Saída cara
+2026-03-25,Roupa,220.00,despesa,Futilidades,Pessoal,Compra impulsiva
+2026-03-27,Uber rolê,45.00,despesa,Uber,Transporte,
+2026-03-28,Combustível,150.00,despesa,Carro,Transporte,
+2026-04-05,Salário Abril,5000.00,receita,Salário,Receita,
+2026-04-06,Freela site,1200.00,receita,Extra,Receita,Projeto grande
+2026-04-07,Supermercado,280.00,despesa,Mercado,Alimentação,
+2026-04-08,Uber trabalho,20.00,despesa,Uber,Transporte,
+2026-04-10,Netflix,55.90,despesa,Streaming,Assinaturas,
+2026-04-10,Conta de Luz,155.00,despesa,Conta de Luz,Casa,
+2026-04-10,Conta de Internet,120.00,despesa,Conta de Internet,Casa,
+2026-04-12,Plano de Saúde,350.00,despesa,Plano de Saúde,Saúde,
+2026-04-14,Restaurante,70.00,despesa,Restaurante,Alimentação,
+2026-04-18,Curso Excel,89.90,despesa,Educação,Educação,
+2026-04-20,Mercado,190.00,despesa,Mercado,Alimentação,
+2026-04-24,Cinema,40.00,despesa,Lazer,Lazer,
+2026-04-27,Uber trabalho,22.00,despesa,Uber,Transporte,
+2026-05-05,Salário Maio,5000.00,receita,Salário,Receita,
+2026-05-07,Supermercado,340.00,despesa,Mercado,Alimentação,Estoque mês
+2026-05-08,Uber trabalho,30.00,despesa,Uber,Transporte,
+2026-05-10,Netflix,55.90,despesa,Streaming,Assinaturas,
+2026-05-10,Conta de Luz,175.00,despesa,Conta de Luz,Casa,
+2026-05-10,Conta de Internet,120.00,despesa,Conta de Internet,Casa,
+2026-05-12,Plano de Saúde,350.00,despesa,Plano de Saúde,Saúde,
+2026-05-13,Consulta médica,250.00,despesa,Plano de Saúde,Saúde,Particular
+2026-05-15,iFood,110.00,despesa,Restaurante,Alimentação,Semana corrida
+2026-05-18,Uber trabalho,25.00,despesa,Uber,Transporte,
+2026-05-20,Mercado,260.00,despesa,Mercado,Alimentação,
+2026-05-22,Viagem fim de semana,650.00,despesa,Lazer,Lazer,Viagem Búzios
+2026-05-25,Eletrônico,380.00,despesa,Futilidades,Pessoal,Compra desnecessária
+2026-05-28,Combustível,160.00,despesa,Carro,Transporte,
+2026-06-05,Salário Junho,5000.00,receita,Salário,Receita,
+2026-06-07,Supermercado,295.00,despesa,Mercado,Alimentação,
+2026-06-08,Uber trabalho,22.00,despesa,Uber,Transporte,
+2026-06-10,Netflix,55.90,despesa,Streaming,Assinaturas,
+2026-06-10,Conta de Luz,160.00,despesa,Conta de Luz,Casa,
+2026-06-10,Conta de Internet,120.00,despesa,Conta de Internet,Casa,
+2026-06-12,Plano de Saúde,350.00,despesa,Plano de Saúde,Saúde,
+2026-06-14,Restaurante,65.00,despesa,Restaurante,Alimentação,
+2026-06-18,Curso Power BI,149.90,despesa,Educação,Educação,
+2026-06-20,Mercado,210.00,despesa,Mercado,Alimentação,
+2026-06-22,Bar,90.00,despesa,Lazer,Lazer,
+2026-06-25,Uber trabalho,20.00,despesa,Uber,Transporte,
+2026-06-28,Manutenção carro,280.00,despesa,Carro,Transporte,Revisão

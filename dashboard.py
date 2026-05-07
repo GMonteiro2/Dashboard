@@ -4,10 +4,23 @@ import plotly.express as px
 
 st.set_page_config(page_title='Dashboard Financeiro', layout='wide')
 
-st.title('💰 Dashboard Financeiro')
+col_header1, col_header2 = st.columns([8, 1])
 
-transacoes = pd.read_csv('dados/transacoes.csv')
-transacoes['data'] = pd.to_datetime(transacoes['data'])
+with col_header1:
+    st.title('💰 Dashboard Financeiro')
+    st.caption('Controle inteligente das suas finanças pessoais')
+
+with col_header2:
+    st.markdown('''
+        <a href="/?theme=light" target="_self" style="text-decoration:none;">
+        </a>
+    ''', unsafe_allow_html=True)
+    if st.button('🌙 / ☀️'):
+        st.toast('Para mudar o tema: Menu (≡) → Settings → Theme')
+
+with st.spinner('Carregando seus dados financeiros...'):
+    transacoes = pd.read_csv('dados/transacoes.csv')
+    transacoes['data'] = pd.to_datetime(transacoes['data'])
 
 despesas = transacoes[transacoes['tipo'] == 'despesa']
 receitas = transacoes[transacoes['tipo'] == 'receita']
@@ -115,6 +128,24 @@ if len(meses) >= 2:
     variacao = ((total_desp_mes - mes_anterior) / mes_anterior * 100) if mes_anterior > 0 else 0
 else:
     variacao = 0
+
+
+# Histórico comparativo
+st.markdown('---')
+st.subheader('📅 Histórico Mensal')
+
+historico = despesas.groupby(despesas['data'].dt.to_period('M'))['valor'].sum().reset_index()
+historico.columns = ['mes', 'total']
+historico['mes'] = historico['mes'].astype(str)
+media = historico['total'].mean()
+historico['status'] = historico['total'].apply(
+    lambda x: '🟢 Abaixo da média' if x < media else '🔴 Acima da média'
+)
+historico['média'] = media.round(2)
+historico['total'] = historico['total'].round(2)
+historico.columns = ['Mês', 'Total (R$)', 'Status', 'Média (R$)']
+
+st.dataframe(historico, use_container_width=True, hide_index=True)
 
 resumo = []
 
