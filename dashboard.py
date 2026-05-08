@@ -44,8 +44,10 @@ with st.sidebar.form('form_gasto'):
     descricao_input = st.text_input('Descrição')
     valor_input = st.number_input('Valor (R$)', min_value=0.0, step=0.01, format='%.2f')
     tipo_input = st.selectbox('Tipo', ['despesa', 'receita'])
-    grupo_input = st.selectbox('Grupo', sorted(transacoes['grupo'].unique()))
-    categoria_input = st.selectbox('Categoria', sorted(transacoes['categoria'].unique()))
+    grupos_disponiveis = sorted(transacoes['grupo'].unique())
+    grupo_input = st.selectbox('Grupo', grupos_disponiveis)
+    categorias_do_grupo = sorted(transacoes[transacoes['grupo'] == grupo_input]['categoria'].unique())
+    categoria_input = st.selectbox('Categoria', categorias_do_grupo)
     observacao_input = st.text_input('Observação (opcional)')
     
     salvar = st.form_submit_button('Salvar')
@@ -129,24 +131,6 @@ if len(meses) >= 2:
 else:
     variacao = 0
 
-
-# Histórico comparativo
-st.markdown('---')
-st.subheader('📅 Histórico Mensal')
-
-historico = despesas.groupby(despesas['data'].dt.to_period('M'))['valor'].sum().reset_index()
-historico.columns = ['mes', 'total']
-historico['mes'] = historico['mes'].astype(str)
-media = historico['total'].mean()
-historico['status'] = historico['total'].apply(
-    lambda x: '🟢 Abaixo da média' if x < media else '🔴 Acima da média'
-)
-historico['média'] = media.round(2)
-historico['total'] = historico['total'].round(2)
-historico.columns = ['Mês', 'Total (R$)', 'Status', 'Média (R$)']
-
-st.dataframe(historico, use_container_width=True, hide_index=True)
-
 resumo = []
 
 resumo.append(f"📊 **Seu maior gasto foi {maior_categoria}** com R$ {maior_valor:.2f}.")
@@ -168,3 +152,21 @@ if perc_saldo > 30:
 
 for linha in resumo:
     st.markdown(linha)
+
+# Histórico comparativo
+st.markdown('---')
+st.subheader('📅 Histórico Mensal')
+
+historico = despesas.groupby(despesas['data'].dt.to_period('M'))['valor'].sum().reset_index()
+historico.columns = ['mes', 'total']
+historico['mes'] = historico['mes'].astype(str)
+media = historico['total'].mean()
+historico['status'] = historico['total'].apply(
+    lambda x: '🟢 Abaixo da média' if x < media else '🔴 Acima da média'
+)
+historico['média'] = media.round(2)
+historico['total'] = historico['total'].round(2)
+historico.columns = ['Mês', 'Total (R$)', 'Status', 'Média (R$)']
+
+st.dataframe(historico, use_container_width=True, hide_index=True)
+
