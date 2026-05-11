@@ -1,12 +1,15 @@
 # 💰 Dashboard Financeiro
 
 Dashboard interativo para controle de finanças pessoais, desenvolvido com Python, Pandas, Plotly e Streamlit.
-
-🔗 **[Acesse o dashboard ao vivo](https://dashboard-organizacaofinanceira.streamlit.app/)**
-
 ---
 
 ## 📸 Preview
+
+<img width="1919" height="872" alt="Captura de tela 2026-05-11 104816" src="https://github.com/user-attachments/assets/6539cbab-2778-4c3a-ad87-4a468a3102c4" />
+
+<img width="1917" height="750" alt="Captura de tela 2026-05-11 104856" src="https://github.com/user-attachments/assets/b6c0986a-354b-4ecf-87eb-3f5942ac4b87" />
+
+
 
 > *Dashboard com tema escuro, gráficos interativos e análise automática do mês*
 
